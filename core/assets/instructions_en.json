@@ -1,3 +1,16 @@
 {
-
+    "0.0": "In this task there are four aliens.\nEach alien might give you 1 point, but each alien does so with a different probability.\nYour goal is to figure out, based on your experience, which alien is most likely to give you a point.\n\nFor example, the aliens might have the following probabilities of giving you a point:",
+    "0.1": "50 %",
+    "0.2": "60 %",
+    "0.3": "70 %",
+    "0.4": "35 %",
+    "1.0": "You will get to choose between either these two aliens:",
+    "1.1": "Or these two aliens:",
+    "1.2": "Your choice should be based on what you've learned about each alien's probability of giving you a point.\nThe probabilities change slowly over time, so stay observant and adjust your choices accordingly.",
+    "2.0": "Before choosing between aliens, you'll first choose between two spaceships.\nEach spaceship leads to a different pair of aliens.\nSpaceship 1 gives you a higher chance of seeing this pair of aliens:",
+    "2.1": "Spaceship 2 gives you a higher chance of seeing this pair:",
+    "2.2": "In the real experiment, the spaceships and aliens will look differently.",
+    "3.0": "To summarize, the structure of the game looks as follows:",
+    "3.1": "First, you pick a spaceship: This spaceship determines which pair of aliens you will most likely see next. But sometimes the spaceship diverges from its route and you see the other pair of aliens.\n\nThen you choose which alien you believe is most likely to give you a point.",
+    "4.0": "Remember:\nPress LEFT to select the spaceship or alien on the left.\nPress RIGHT to select the spaceship or alien on the right."
 }

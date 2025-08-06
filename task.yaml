@@ -1,7 +1,15 @@
 meta:
-  name: "task-template"
+  name: "two-step"
   version: 0.0.1
   reduced_actions: Null
-  fullpoints: Null
+  fullpoints: 100
 graph:
-  0: []
+    0:
+      next: [1, 2]
+      prob: 0.7
+    1: [3, 4]
+    2: [5, 6]
+    3: []
+    4: []
+    5: []
+    6: []

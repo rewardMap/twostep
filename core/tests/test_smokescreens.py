@@ -1,6 +1,6 @@
 # Module name needs to be changed here:
 try:
-    from task_template.core import (
+    from twostep.core import (
         get_configs,
         get_psychopy_info,
         get_pygame_info,
@@ -18,7 +18,7 @@ except (ModuleNotFoundError, ImportError):
         )
 
     except (ModuleNotFoundError, ImportError):
-        from rewardgym.tasks.task_template.core import (
+        from rewardgym.tasks.twostep.core import (
             get_configs,
             get_pygame_info,
             get_psychopy_info,
