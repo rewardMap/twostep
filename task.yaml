@@ -1,0 +1,7 @@
+meta:
+  name: "task-template"
+  version: 0.0.1
+  reduced_actions: Null
+  fullpoints: Null
+graph:
+  0: []
