@@ -134,6 +134,7 @@ def get_psychopy_info(
         target="reward",
         name="reward",
         bar_total=fullpoints,
+        rl_label="reward"
     )
 
     fix = ImageStimulus(
@@ -167,6 +168,8 @@ def get_psychopy_info(
                 duration_phase2=0.75,
                 images=[stim1, stim2],
                 positions=[(-image_shift, 0), (image_shift, 0)],
+                rl_label="action",
+                rl_label_phase1="obs",
             ),
         ]
 
@@ -184,6 +187,8 @@ def get_psychopy_info(
                 duration_phase2=0.5,
                 images=[s2_img1, s2_img2],
                 positions=[(-image_shift, 0), (image_shift, 0)],
+                rl_label="action",
+                rl_label_phase1="obs"
             ),
         ]
 
