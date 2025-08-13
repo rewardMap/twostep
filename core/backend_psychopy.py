@@ -143,7 +143,7 @@ def get_psychopy_info(
         autodraw=True,
         name="initial-fixation",
     )
-    fix_iti = BaseStimulus(duration=1.0, name="iti")
+    fix_iti = BaseStimulus(duration=1.0, name="iti", rl_label='obs')
 
     fix2 = ImageStimulus(
         image_paths=[fixation_cross()],
@@ -170,6 +170,7 @@ def get_psychopy_info(
                 positions=[(-image_shift, 0), (image_shift, 0)],
                 rl_label="action",
                 rl_label_phase1="obs",
+                rl_label_phase2='reward',
             ),
         ]
 
