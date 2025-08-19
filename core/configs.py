@@ -12,7 +12,7 @@ def get_configs(stimulus_set: str = "1"):
         "unexpected-transition": {0: {0: 2, 1: 1}},
         None: None,
     }
-    seed = check_random_state(int(stimulus_set))
+    random_state = check_random_state(int(stimulus_set))
 
     # Actually create pseudo-random transitions:
     transition_list = ["expected-transition"] * 14 + ["unexpected-transition"] * 6
@@ -24,11 +24,11 @@ def get_configs(stimulus_set: str = "1"):
     for _ in range(9):
         reject = True
         itis.extend(
-            seed.choice(a=iti_jitter, size=len(iti_jitter), replace=False).tolist()
+            random_state.choice(a=iti_jitter, size=len(iti_jitter), replace=False).tolist()
         )
 
         while reject:
-            condition_proposal = seed.choice(
+            condition_proposal = random_state.choice(
                 a=transition_list, size=len(transition_list), replace=False
             ).tolist()
             check = check_conditions_not_following(
