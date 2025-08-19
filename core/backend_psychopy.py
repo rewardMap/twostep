@@ -16,10 +16,10 @@ try:
         draw_alien,
         make_card_stimulus,
     )
-    from ....utils import check_seed
+    from ....utils import check_random_state
 
 except ImportError:
-    from rewardgym import check_seed
+    from rewardgym import check_random_state
     from rewardgym.psychopy_render import (
         TwoStimuliWithResponseAndSelection,
         FeedBackStimulus,
@@ -37,7 +37,7 @@ except ImportError:
 
 
 def twostep_card_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
-    random_state = check_seed(random_state)
+    random_state = check_random_state(random_state)
 
     stim_defaults = deepcopy(stim_defaults)
     colors = stim_defaults["colors"]
@@ -72,7 +72,7 @@ def twostep_card_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
 
 
 def twostep_alien_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
-    random_state = check_seed(random_state)
+    random_state = check_random_state(random_state)
 
     stim_defaults = deepcopy(stim_defaults)
     colors = stim_defaults["colors"]
@@ -121,7 +121,7 @@ def get_psychopy_info(
     fullpoints=None,
     **kwargs,
 ):
-    seed = check_seed(seed)
+    seed = check_random_state(seed)
 
     if external_stimuli is None:
         stim_set, stimuli = twostep_alien_stimuli(seed)

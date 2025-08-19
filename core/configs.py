@@ -1,8 +1,8 @@
 try:
-    from rewardgym.utils import check_seed
+    from rewardgym.utils import check_random_state
     from rewardgym.tasks.utils import check_conditions_not_following
 except ImportError:
-    from ....utils import check_seed
+    from ....utils import check_random_state
     from ...utils import check_conditions_not_following
 
 
@@ -12,7 +12,7 @@ def get_configs(stimulus_set: str = "1"):
         "unexpected-transition": {0: {0: 2, 1: 1}},
         None: None,
     }
-    seed = check_seed(int(stimulus_set))
+    seed = check_random_state(int(stimulus_set))
 
     # Actually create pseudo-random transitions:
     transition_list = ["expected-transition"] * 14 + ["unexpected-transition"] * 6
