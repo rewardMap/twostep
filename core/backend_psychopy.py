@@ -1,5 +1,6 @@
 from copy import deepcopy
 import numpy as np
+import pathlib
 
 try:
     from ....psychopy_render import (
@@ -114,6 +115,81 @@ def twostep_alien_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
     return stim_set, stim_properties
 
 
+def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_DEFAULTS):
+
+    def recolor(input_file, new_color, target_size=(300, 300)):
+        from PIL import Image
+
+        img = Image.open(input_file).convert("RGBA")
+        img.thumbnail(target_size, Image.Resampling.LANCZOS)  # keeps aspect ratio
+        data = np.array(img, dtype=float)
+        gray = np.array(img.convert("L"), dtype=float)  # convert to grayscale (1 channel)
+        data[..., :3] = np.stack([gray]*3, axis=-1)    #
+
+        r, g, b, a = data[..., 0], data[..., 1], data[..., 2], data[..., 3]
+
+        # Mask: ignore transparent, black, white
+        mask = (a > 0) & ~((r < 20) & (g < 20) & (b < 20)) & ~((r > 235) & (g > 235) & (b > 235))
+
+        factors = np.array(new_color) / 255.0
+
+        # Apply multiplicative recoloring only inside mask
+        for i in range(3):
+            data[..., i][mask] = data[..., i][mask] * factors[i]
+
+        data = np.clip(data, 0, 255)
+
+        data = data[::-1, :] / 255
+
+        return data
+
+    random_state = check_random_state(random_state)
+
+    stim_defaults = deepcopy(stim_defaults)
+    colors = stim_defaults["colors"]
+    set_colors = random_state.choice(np.arange(len(colors[:-1])), 3, replace=False)
+    set_colors = [colors[i] for i in set_colors]
+
+    space_order = random_state.choice(np.arange(2), 2, replace=False)
+
+    stim_set = {}
+
+    stim_set[0] = [
+        draw_spaceship(
+            version=space_order[0], height=400, width=400, body_color=set_colors[0]
+        ),
+        draw_spaceship(
+            version=space_order[1], height=400, width=400, body_color=set_colors[0]
+        ),
+    ]
+
+    if directory is None:
+        directory = pathlib.Path(__file__).parents[0].resolve() / "assets"/ "stimuli_svg"
+
+    aliens = list(directory.glob("Alien*rec.png"))
+
+    alien_order = random_state.choice(aliens, 4, replace=False)
+
+    planets = list(directory.glob("Planets*rec.png"))
+
+    planet_order = random_state.choice(planets, 2, replace=False)
+
+    stim_set[1] = [
+        recolor(alien_order[0].as_posix(), new_color=set_colors[1]),
+        recolor(alien_order[1].as_posix(), new_color=set_colors[1]),
+        recolor(planet_order[0].as_posix(), new_color=set_colors[1], target_size=(300, 300)),
+        ]
+
+    stim_set[2] = [
+        recolor(alien_order[2].as_posix(), new_color=set_colors[2]),
+        recolor(alien_order[3].as_posix(), new_color=set_colors[2]),
+        recolor(planet_order[1].as_posix(), new_color=set_colors[2], target_size=(300, 300)),
+        ]
+
+    stim_properties = {}
+    return stim_set, stim_properties
+
+
 def get_psychopy_info(
     random_state=111,
     key_dict={"left": 0, "right": 1},
@@ -124,7 +200,7 @@ def get_psychopy_info(
     random_state = check_random_state(random_state)
 
     if external_stimuli is None:
-        stim_set, stimuli = twostep_alien_stimuli(random_state)
+        stim_set, stimuli = two_step_alien_images(random_state)
     else:
         stim_set, stimuli = external_stimuli
 
@@ -147,7 +223,7 @@ def get_psychopy_info(
 
     fix2 = ImageStimulus(
         image_paths=[fixation_cross()],
-        duration=0.5,
+        duration=0.25,
         autodraw=True,
         name="transition",
     )
@@ -176,9 +252,15 @@ def get_psychopy_info(
 
         return tmp_list
 
-    def second_state(s2_img1, s2_img2, key_dict):
+    def second_state(s2_img1, s2_img2, s2_planet, key_dict):
         tmp_list = [
             fix2,
+            ImageStimulus(
+                image_paths=[s2_planet, fixation_cross()],
+                duration=0.25,
+                name="planet",
+                positions=[(0, -100), (0, 0)]
+            ),
             TwoStimuliWithResponseAndSelection(
                 duration=2.0,
                 key_dict=key_dict,
@@ -186,10 +268,11 @@ def get_psychopy_info(
                 duration_phase1=0.1,
                 name_phase2="stage-2-selection",
                 duration_phase2=0.5,
-                images=[s2_img1, s2_img2],
-                positions=[(-image_shift, 0), (image_shift, 0)],
+                images=[s2_img1, s2_img2, s2_planet, fixation_cross()],
+                positions=[(-image_shift, 0), (image_shift, 0), (0, -100), (0, 0)],
                 rl_label="action",
-                rl_label_phase1="obs"
+                rl_label_phase1="obs",
+                flip_probability=0.5,
             ),
         ]
 
@@ -205,6 +288,7 @@ def get_psychopy_info(
             "psychopy": second_state(
                 s2_img1=stim_set[1][0],
                 s2_img2=stim_set[1][1],
+                s2_planet=stim_set[1][2],
                 key_dict=key_dict,
             )
         },
@@ -212,6 +296,7 @@ def get_psychopy_info(
             "psychopy": second_state(
                 s2_img1=stim_set[2][0],
                 s2_img2=stim_set[2][1],
+                s2_planet=stim_set[2][2],
                 key_dict=key_dict,
             )
         },

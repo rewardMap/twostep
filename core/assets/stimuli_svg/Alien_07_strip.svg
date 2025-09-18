@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="none"
+   stroke-linecap="square"
+   stroke-miterlimit="10"
+   version="1.1"
+   viewBox="0 0 417 476"
+   id="svg14"
+   sodipodi:docname="Alien_07_strip.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.7478992"
+     inkscape:cx="182.5048"
+     inkscape:cy="239.43028"
+     inkscape:window-width="1920"
+     inkscape:window-height="984"
+     inkscape:window-x="1958"
+     inkscape:window-y="56"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g14" />
+  <clipPath
+     id="a">
+    <path
+       d="m0 0h417v476h-417v-476z"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#a)"
+     id="g14">
+    <path
+       d="m0 0h417.72v476.43h-417.72z"
+       fill="#000"
+       fill-opacity="0"
+       id="path2" />
+    <path
+       d="m198.13 46.85c32.015-5.3201 70.748-6.9386 100.75 8.328 30 15.267 62.685 51.813 79.252 83.272 16.567 31.458 23.06 69.394 20.15 105.48-2.9103 36.085-14.328 84.891-37.612 111.03-23.283 26.139-64.477 36.318-102.09 45.802-37.612 9.4841-88.434 20.586-123.58 11.102-35.149-9.4841-67.611-38.63-87.312-68.007-19.701-29.377-30.224-77.259-30.895-108.26-0.67148-30.996 11.866-52.97 26.866-77.721 15-24.75 37.388-52.276 63.134-70.781 25.746-18.505 59.326-34.929 91.341-40.249z"
+       fill="#ff59a1"
+       id="path3"
+       style="stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m157.83 183.74c0-36.355 30.374-65.827 67.843-65.827 17.993 0 35.249 6.9353 47.972 19.28 12.723 12.345 19.871 29.088 19.871 46.547 0 36.355-30.374 65.827-67.843 65.827-37.468 0-67.843-29.472-67.843-65.827z"
+       fill="#2ff3c1"
+       id="path4"
+       style="fill:#ffffff;stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m184.65 183.74c0-23.657 18.367-42.835 41.024-42.835 10.88 0 21.315 4.5129 29.008 12.546 7.6934 8.0331 12.016 18.928 12.016 30.289 0 23.657-18.367 42.835-41.024 42.835s-41.024-19.178-41.024-42.835z"
+       fill="#000"
+       id="path5" />
+    <path
+       d="m224.99 168.97c0-6.6796 5.711-12.094 12.756-12.094 3.3831 0 6.6276 1.2742 9.0198 3.5424 2.3922 2.2682 3.7361 5.3444 3.7361 8.5521 0 6.6796-5.711 12.094-12.756 12.094-7.0449 0-12.756-5.4149-12.756-12.094z"
+       fill="#fff"
+       id="path6" />
+    <path
+       d="m247.02 304.45c-0.24983 2.3218 1.6132 10.986-1.499 13.931-3.1122 2.9452-12.907 4.4994-17.174 3.7401-4.2665-0.75928-6.8498-5.6154-8.4248-8.2959-1.5751-2.6804-0.85471-6.4889-1.0256-7.7866"
+       fill="#fff"
+       id="path7"
+       style="stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m276.02 301.45c-0.24985 2.3218 1.6132 10.986-1.499 13.931-3.1122 2.9452-12.907 4.4994-17.174 3.7401-4.2665-0.75928-6.8498-5.6154-8.4249-8.2959-1.5751-2.6804-0.85471-6.4889-1.0256-7.7866"
+       fill="#fff"
+       id="path8"
+       style="stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m192.23 302.67c-0.24983 2.3218-3.8656 10.611-1.499 13.931s11.443 6.1634 15.699 5.9865c4.256-0.17691 7.7602-4.6171 9.8376-7.0479 2.0774-2.4308 2.1891-6.2809 2.6269-7.537"
+       fill="#fff"
+       id="path9"
+       style="stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m155.14 280.45c8.7314 4.2537 32.911 22.164 52.388 25.522 19.478 3.3583 48.582-2.9099 64.478-5.3727 15.895-2.4628 22.836-4.7025 30.895-9.4042 8.0595-4.7017 14.552-15.671 17.462-18.806"
+       fill="#000"
+       fill-opacity="0"
+       id="path10" />
+    <path
+       d="m155.14 280.45c8.7314 4.2537 32.911 22.164 52.388 25.522 19.478 3.3583 48.582-2.9099 64.478-5.3727 15.895-2.4628 22.836-4.7025 30.895-9.4042 8.0595-4.7017 14.552-15.671 17.462-18.806"
+       stroke="#c9467e"
+       stroke-linecap="butt"
+       stroke-linejoin="round"
+       stroke-width="4"
+       id="path11"
+       style="stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m58.772 149.62c9.5-5.8333 23.667-30.167 44-45 20.333-14.833 49.333-36.333 78-44 28.667-7.6667 71.333-4.3333 94-2 22.667 2.3333 32 16.667 42 16 10-0.66666 16.667-13.833 18-20 1.3333-6.1667-4-13.167-10-17s-17.833-9.1667-26-6c-8.1667 3.1667-20.167 24.167-23 25-2.8333 0.83333 6.1667-14.833 6-20s-2.6667-7.5-7-11-13-10.167-19-10c-6 0.16667-12.833 4.3333-17 11-4.1667 6.6667-6.5 27.333-8 29-1.5 1.6667 2.8333-13.333-1-19s-15-12.667-22-15c-7-2.3333-15-0.83333-20 1-5 1.8333-7.3333 4.1667-10 10-2.6667 5.8333-3.6667 23.167-6 25-2.3333 1.8333-3-10.833-8-14s-15.167-5.3333-22-5c-6.8333 0.33333-15.667 1.5-19 7-3.3333 5.5-2.6667 19.833-1 26 1.6667 6.1667 13.833 11.333 11 11-2.8333-0.33334-21-10.167-28-13-7-2.8333-8.8333-5.1667-14-4-5.1667 1.1667-13.167 5.5-17 11-3.8333 5.5-7.3333 14.667-6 22 1.3333 7.3333 14.5 20.667 14 22-0.5 1.3333-11.167-11.333-17-14-5.8333-2.6667-13.5-4.5-18-2s-8.8333 11.167-9 17c-0.16666 5.8333 4.5 13.333 8 18 3.5 4.6667 3.5 15.833 13 10z"
+       fill="#ff59a1"
+       id="path12" />
+    <path
+       d="m82.73 373.78c-4.1898 15.771-11.774 51.096-7.5402 66.212 4.234 15.117 19.109 22.799 32.944 24.488 13.836 1.6888 42.529 2.9427 50.069-14.355 7.5402-17.297 4.8178-71.97-4.828-89.429-9.6458-17.46-41.273-17.51-53.047-15.329-11.774 2.1806-13.409 12.642-17.598 28.413z"
+       fill="#ff59a1"
+       id="path13"
+       style="stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m335.72 350.08c6.6323 14.445 19.87 47.195 18.814 62.852-1.0564 15.658-13.026 26.409-25.152 31.093-12.126 4.6842-37.682 12.208-47.603-2.9881-9.9206-15.196-17.414-69.059-11.921-88.188 5.4935-19.129 33.905-26.124 44.882-26.586 10.977-0.46155 14.348 9.3716 20.98 23.816z"
+       fill="#ff59a1"
+       id="path14"
+       style="stroke:#000000;stroke-opacity:1" />
+  </g>
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Pink Monster</dc:title>
+        <dc:date>2014-02-18T20:21:36</dc:date>
+        <dc:description>A clipart of a pink monster</dc:description>
+        <dc:source>https://openclipart.org/detail/191068/pink-monster-by-scout-191068</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Scout</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>alien</rdf:li>
+            <rdf:li>animal</rdf:li>
+            <rdf:li>character</rdf:li>
+            <rdf:li>creature</rdf:li>
+            <rdf:li>critter</rdf:li>
+            <rdf:li>cute</rdf:li>
+            <rdf:li>cyclops</rdf:li>
+            <rdf:li>excited</rdf:li>
+            <rdf:li>happy</rdf:li>
+            <rdf:li>monster</rdf:li>
+            <rdf:li>pink</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

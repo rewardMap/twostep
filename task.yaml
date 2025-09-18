@@ -1,6 +1,6 @@
 meta:
   name: "two-step"
-  version: 0.0.1
+  version: 0.0.2
   reduced_actions: Null
   fullpoints: 100
 graph:

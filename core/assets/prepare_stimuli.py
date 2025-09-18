@@ -207,5 +207,6 @@ if __name__ == "__main__":
 
     for file in output_folder.glob("*_strip.png"):
         multiplicative_recolor(file.as_posix(), file.as_posix().replace("_strip.png", "_rec.png"), new_color=(255, 255, 255), luminance=(0.85, 1.35, 0.6))
-        multiplicative_recolor( file.as_posix().replace("_strip.png", "_rec.png"), file.as_posix().replace("_strip.png", "_test.png"),
-        new_color=(60 + 15, 109 + 15, 86 + 15), luminance=None)
+        file.unlink()
+        #multiplicative_recolor( file.as_posix().replace("_strip.png", "_rec.png"), file.as_posix().replace("_strip.png", "_test.png"),
+        #new_color=(60 + 15, 109 + 15, 86 + 15), luminance=None)
