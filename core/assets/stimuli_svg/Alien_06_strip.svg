@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   viewBox="0 0 318.24 333.24"
+   id="svg24"
+   sodipodi:docname="Alien_06_strip.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.88271645"
+     inkscape:cx="379.51032"
+     inkscape:cy="13.027966"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="1792"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg24" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title />
+        <dc:date>2008-07-07T11:40:13</dc:date>
+        <dc:description>Cartoon giraffe sitting, front view. Nice 20 minute tutorial video for drawing the giraffe in Inkscape &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=qZt9J_AUYZI&quot;&gt;https://www.youtube.com/watch?v=qZt9J_AUYZI&lt;/a&gt;</dc:description>
+        <dc:source>https://openclipart.org/detail/17628/cartoon-giraffe-by-lemmling</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>lemmling</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>animal</rdf:li>
+            <rdf:li>cartoon</rdf:li>
+            <rdf:li>colour</rdf:li>
+            <rdf:li>funny</rdf:li>
+            <rdf:li>giraffe</rdf:li>
+            <rdf:li>mammal</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="m254.75 252.62c1.6508 4.2256-14.978 54.021 28.19 55.475 17.038 0.57391 35.672 2.9189 33.307 21.183-122.23 8.1662-84.305-39.43-81.081-44.669"
+     fill="#a92654"
+     stroke="#000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="4"
+     id="path1" />
+  <path
+     d="m65.496 252.36c-1.6508 4.2256 4.9781 51.799-28.19 55.475-16.944 1.8781-35.672 0.41891-35.307 21.183 99.23 5.1662 86.305-39.43 83.081-44.669"
+     fill="#a92654"
+     stroke="#000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="4"
+     id="path2" />
+  <path
+     d="m263.49 223.39c0.024 59.402-48.118 107.57-107.51 107.57-59.38 0-107.52-48.171-107.51-107.57-0.012-59.414 48.13-107.58 107.51-107.58 59.392 0 107.53 48.171 107.51 107.58z"
+     fill="#ff0958"
+     stroke="#000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="4.0001"
+     id="path3" />
+  <path
+     d="m256.99 186.47c0.068 1.6593 0.1177 3.3383 0.1177 5.0075 0 59.363-48.153 107.54-107.5 107.54-46.386 0-85.97-29.456-101.04-70.664 2.6108 57.056 49.743 102.57 107.42 102.57 59.352 0 107.5-48.18 107.5-107.54 0-12.961-2.2968-25.401-6.4976-36.918z"
+     fill-opacity=".31373"
+     id="path4" />
+  <path
+     d="m83.021 212.23a14.675 23.178 13.764 0 1-28.505-6.9914 14.675 23.178 13.764 1 1 28.505 6.9914z"
+     fill="#d3ab6c"
+     id="path5"
+     style="fill:#bfbfbf" />
+  <path
+     d="m130.59 273.95c-1.6508 4.2256 9.7445 22.926-3.5228 36.142-17.045 16.979 3.7725 23.697 10.249 20.294 11.896 2.944 20.305-27.43 17.081-32.669"
+     fill="#ff0958"
+     stroke="#000"
+     stroke-width="4"
+     id="path6" />
+  <path
+     d="m163 245.31a26.645 28.201 0 0 1-53.29 0 26.645 28.201 0 1 1 53.29 0z"
+     fill="#d3ab6c"
+     id="path7"
+     style="fill:#bfbfbf" />
+  <path
+     d="m247.48 196.53a16.224 9.2685 71.577 0 1-17.585 5.8637 16.224 9.2685 71.577 1 1 17.585-5.8637z"
+     fill="#d3ab6c"
+     id="path8"
+     style="fill:#bfbfbf" />
+  <path
+     d="m207.99 254.07a13.13 16.225 0 0 1-26.26 0 13.13 16.225 0 1 1 26.26 0z"
+     fill="#d3ab6c"
+     id="path9"
+     style="fill:#bfbfbf" />
+  <path
+     d="m203.94 187.86a20.853 23.178 0 0 1-41.706 0 20.853 23.178 0 1 1 41.706 0z"
+     fill="#d3ab6c"
+     id="path10"
+     style="fill:#bfbfbf" />
+  <g
+     transform="matrix(.6766 0 0 .50825 -518.69 -10.046)"
+     id="g11">
+    <path
+       d="m880.87 314.87c14.505-37.9 11.841-128.73 11.841-128.73l35.523-3.27s-0.8881 91.49 13.913 130.04"
+       fill="#ff0958"
+       fill-rule="evenodd"
+       stroke="#000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="6.8211"
+       id="path11" />
+  </g>
+  <g
+     transform="translate(-1543 -27.932)"
+     id="g15">
+    <path
+       d="m1690.3 76.158c0.01 25.523-20.682 46.221-46.21 46.221-25.523 0-46.216-20.698-46.211-46.221-0.01-25.528 20.688-46.226 46.211-46.226 25.528 0 46.221 20.698 46.21 46.226z"
+       fill="#ff0958"
+       stroke="#000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="4.0001"
+       id="path12" />
+    <path
+       d="m1675.8 67.717c0.01 12.52-10.14 22.67-22.66 22.67s-22.67-10.15-22.66-22.67c-0.01-12.52 10.14-22.67 22.66-22.67s22.67 10.15 22.66 22.67z"
+       fill="#fff"
+       stroke="#000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="4"
+       id="path13" />
+    <path
+       d="m1666.4 71.717c0 4.18-3.38 7.56-7.5501 7.56-4.1799 0-7.5599-3.38-7.5599-7.56 0-4.17 3.38-7.55 7.5599-7.55 4.1701 0 7.5501 3.38 7.5501 7.55z"
+       id="path14" />
+    <path
+       d="m1687.5 60.295c0.03 0.71297 0.051 1.4344 0.051 2.1516 0 25.507-20.697 46.208-46.208 46.208-19.938 0-36.952-12.656-43.428-30.362 1.1221 24.515 21.381 44.073 46.17 44.073 25.511 0 46.208-20.701 46.208-46.208 0-5.5688-0.9872-10.914-2.7928-15.863z"
+       fill-opacity=".31373"
+       id="path15" />
+  </g>
+  <g
+     transform="matrix(.6766 0 0 .50825 -399.69 -5.8102)"
+     id="g16">
+    <path
+       d="m880.87 314.87c14.505-37.9 11.841-128.73 11.841-128.73l35.523-3.27s-0.8881 91.49 13.913 130.04"
+       fill="#ff0958"
+       fill-rule="evenodd"
+       stroke="#000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="6.8211"
+       id="path16" />
+  </g>
+  <path
+     d="m154.86 48.226c-0.01 25.523 20.682 46.221 46.21 46.221 25.523 0 46.216-20.698 46.211-46.221 0.01-25.528-20.688-46.226-46.211-46.226-25.528 0-46.221 20.698-46.21 46.226z"
+     fill="#ff0958"
+     stroke="#000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="4.0001"
+     id="path17" />
+  <path
+     d="m169.32 39.785c-0.01 12.52 10.14 22.67 22.66 22.67s22.67-10.15 22.66-22.67c0.01-12.52-10.14-22.67-22.66-22.67s-22.67 10.15-22.66 22.67z"
+     fill="#fff"
+     stroke="#000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="4"
+     id="path18" />
+  <path
+     d="m178.76 43.785c0 4.18 3.38 7.56 7.5501 7.56 4.1799 0 7.5599-3.38 7.5599-7.56 0-4.17-3.38-7.55-7.5599-7.55-4.1701 0-7.5501 3.38-7.5501 7.55z"
+     id="path19" />
+  <path
+     d="m244.45 32.363c0.03 0.71297 0.051 1.4344 0.051 2.1516 0 25.507-20.697 46.208-46.208 46.208-19.938 0-36.952-12.656-43.428-30.362 1.1221 24.515 21.381 44.073 46.17 44.073 25.511 0 46.208-20.701 46.208-46.208 0-5.5688-0.9872-10.914-2.7928-15.863z"
+     fill-opacity=".31373"
+     id="path20" />
+  <path
+     d="m189.01 273.95c1.6508 4.2256-9.7445 22.926 3.5228 36.142 17.045 16.979-3.7725 23.697-10.249 20.294-11.896 2.944-20.305-27.43-17.081-32.669"
+     fill="#ff0958"
+     stroke="#000"
+     stroke-width="4"
+     id="path21" />
+  <path
+     d="m227.8 259.14c1.6508 4.2256-9.7445 22.926 3.5228 36.142 17.045 16.979-3.7725 23.697-10.249 20.294-11.896 2.944-20.305-27.43-17.081-32.669"
+     fill="#ff0958"
+     stroke="#000"
+     stroke-width="4"
+     id="path22" />
+  <path
+     d="m90.045 257.81c-1.6508 4.2256 9.7445 22.926-3.5228 36.142-17.045 16.979 3.7725 23.697 10.249 20.294 11.896 2.944 20.305-27.43 17.081-32.669"
+     fill="#ff0958"
+     stroke="#000"
+     stroke-width="4"
+     id="path23" />
+  <path
+     d="m94.242 237.79a14.925 8.676 60.068 0 1-15.033 8.6654 14.925 8.676 60.068 1 1 15.033-8.6654z"
+     fill="#d3ab6c"
+     id="path24"
+     style="fill:#bfbfbf" />
+</svg>
