@@ -29,10 +29,11 @@ def instructions_psychopy(instructions=instructions):
 
     stimulus_colors = {
         "colors": [
-             (0, 0, 200),
+             (150, 0, 200),
+             (0, 150, 200),
+             (100, 150, 50),
              (200, 200, 0),
-             (0, 150, 200),
-             (0, 150, 200),
+             (0, 0, 0),
         ]
     }
 
@@ -133,7 +134,7 @@ def instructions_psychopy(instructions=instructions):
             win=win,
             text="\n\n".join([instructions["3.0"],instructions["3.1"],instructions["3.2"]]),
             letterHeight=28,
-            pos=(0, 250),
+            pos=(0, 150),
         )
 
         for i in [
@@ -145,7 +146,7 @@ def instructions_psychopy(instructions=instructions):
             win=win,
             text="\n\n".join([instructions["4.0"],instructions["4.1"],instructions["4.2"]]),
             letterHeight=28,
-            pos=(0, 250),
+            pos=(0, 150),
         )
 
         for i in [
@@ -209,7 +210,7 @@ def instructions_psychopy(instructions=instructions):
             pos=(0, -250),
         )
 
-        size = (400, 400)
+        size = (350, 350)
         img_space1 = ImageStim(win=win, image=stimuli[0][0], pos=(-325, 0), size=size)
         img_space2 = ImageStim(win=win, image=stimuli[0][1], pos=(325, 0), size=size)
 
@@ -241,8 +242,8 @@ def instructions_psychopy(instructions=instructions):
         size = (100, 100)
         img_space1 = ImageStim(win=win, image=stimuli[0][0], pos=(-200, 25), size=size)
 
-        img_planet1 = ImageStim(win=win, image=stimuli[1][2], pos=(-200, -125), size=size)
-        img_planet2 = ImageStim(win=win, image=stimuli[2][2], pos=(200, -125), size=size)
+        img_planet1 = ImageStim(win=win, image=stimuli[1][2], pos=(-200, -150), size=size)
+        img_planet2 = ImageStim(win=win, image=stimuli[2][2], pos=(200, -150), size=size)
 
         arrow_text1 = TextStim(
             win=win,
@@ -298,7 +299,7 @@ def instructions_psychopy(instructions=instructions):
             size=(1000, None)
         )
 
-        size = (400, 400)
+        size = (350, 350)
         img_space1 = ImageStim(win=win, image=stimuli[1][0], pos=(-325, 0), size=size)
         img_space2 = ImageStim(win=win, image=stimuli[1][1], pos=(325, 0), size=size)
 
@@ -320,7 +321,7 @@ def instructions_psychopy(instructions=instructions):
             size=(1000, None)
         )
 
-        size = (400, 400)
+        size = (350, 350)
         img_space1 = ImageStim(win=win, image=stimuli[1][0], pos=(325, 0), size=size)
         img_space2 = ImageStim(win=win, image=stimuli[1][1], pos=(-325, 0), size=size)
 

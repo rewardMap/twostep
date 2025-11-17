@@ -147,7 +147,7 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
 
     stim_defaults = deepcopy(stim_defaults)
     colors = stim_defaults["colors"]
-    set_colors = random_state.choice(np.arange(len(colors[:-1])), 3, replace=False)
+    set_colors = random_state.choice(np.arange(len(colors[:-1])), 4, replace=False)
     set_colors = [colors[i] for i in set_colors]
 
     space_order = random_state.choice(np.arange(2), 2, replace=False)
@@ -159,7 +159,7 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
             version=space_order[0], height=400, width=400, body_color=set_colors[0]
         ),
         draw_spaceship(
-            version=space_order[1], height=400, width=400, body_color=set_colors[0]
+            version=space_order[1], height=400, width=400, body_color=set_colors[1]
         ),
     ]
 
@@ -175,15 +175,15 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
     planet_order = random_state.choice(planets, 2, replace=False)
 
     stim_set[1] = [
-        recolor(alien_order[0].as_posix(), new_color=set_colors[1]),
-        recolor(alien_order[1].as_posix(), new_color=set_colors[1]),
-        recolor(planet_order[0].as_posix(), new_color=set_colors[1], target_size=(300, 300)),
+        recolor(alien_order[0].as_posix(), new_color=set_colors[2]),
+        recolor(alien_order[1].as_posix(), new_color=set_colors[2]),
+        recolor(planet_order[0].as_posix(), new_color=set_colors[2], target_size=(300, 300)),
         ]
 
     stim_set[2] = [
-        recolor(alien_order[2].as_posix(), new_color=set_colors[2]),
-        recolor(alien_order[3].as_posix(), new_color=set_colors[2]),
-        recolor(planet_order[1].as_posix(), new_color=set_colors[2], target_size=(300, 300)),
+        recolor(alien_order[2].as_posix(), new_color=set_colors[3]),
+        recolor(alien_order[3].as_posix(), new_color=set_colors[3]),
+        recolor(planet_order[1].as_posix(), new_color=set_colors[3], target_size=(300, 300)),
         ]
 
     stim_properties = {}
