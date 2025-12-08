@@ -1,14 +1,9 @@
 try:
     from psychopy.visual import ImageStim, TextBox2, Line, TextStim
 except ModuleNotFoundError:
-    try:
-        from rewardgym.psychopy_render.psychopy_stubs import ImageStim, TextBox2, Line, TextStim
-    except ModuleNotFoundError:
-        from ....psychopy_render.psychopy_stubs import ImageStim, TextBox2, Line, TextStim
-try:
-    from ....stimuli import zero_cross, win_cross, lose_cross
-except ImportError:
-    from rewardgym.stimuli import zero_cross, win_cross, lose_cross
+    from rewardgym.psychopy_render.psychopy_stubs import ImageStim, TextBox2, Line, TextStim
+
+from rewardgym.stimuli import zero_cross, win_cross, lose_cross
 
 from .backend_psychopy import two_step_alien_images
 import json

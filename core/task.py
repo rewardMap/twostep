@@ -3,14 +3,9 @@ from typing import Literal, Union
 
 import numpy as np
 
-try:
-    from ....reward_classes import DriftingReward
-    from ....utils import check_random_state
-    from ...yaml_tools import load_task_from_yaml
-except ImportError:
-    from rewardgym import check_random_state
-    from rewardgym.reward_classes import DriftingReward
-    from rewardgym.tasks.yaml_tools import load_task_from_yaml
+from rewardgym import check_random_state
+from rewardgym.reward_classes import DriftingReward
+from rewardgym.tasks.yaml_tools import load_task_from_yaml
 
 
 def get_task(

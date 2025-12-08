@@ -2,39 +2,21 @@ from copy import deepcopy
 import numpy as np
 import pathlib
 
-try:
-    from ....psychopy_render import (
-        TwoStimuliWithResponseAndSelection,
-        FeedBackStimulus,
-        ImageStimulus,
-        BaseStimulus,
-    )
-    from ....stimuli import (
-        fixation_cross,
-        STIMULUS_DEFAULTS,
-        generate_stimulus_properties,
-        draw_spaceship,
-        draw_alien,
-        make_card_stimulus,
-    )
-    from ....utils import check_random_state
-
-except ImportError:
-    from rewardgym import check_random_state
-    from rewardgym.psychopy_render import (
-        TwoStimuliWithResponseAndSelection,
-        FeedBackStimulus,
-        ImageStimulus,
-        BaseStimulus,
-    )
-    from rewardgym.stimuli import (
-        fixation_cross,
-        STIMULUS_DEFAULTS,
-        generate_stimulus_properties,
-        draw_spaceship,
-        draw_alien,
-        make_card_stimulus,
-    )
+from rewardgym import check_random_state
+from rewardgym.psychopy_render import (
+    TwoStimuliWithResponseAndSelection,
+    FeedBackStimulus,
+    ImageStimulus,
+    BaseStimulus,
+)
+from rewardgym.stimuli import (
+    fixation_cross,
+    STIMULUS_DEFAULTS,
+    generate_stimulus_properties,
+    draw_spaceship,
+    draw_alien,
+    make_card_stimulus,
+)
 
 
 def twostep_card_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
@@ -239,7 +221,7 @@ def get_psychopy_info(
                 duration=2.0,
                 key_dict=key_dict,
                 name_phase1="stage-1-decision",
-                duration_phase1=0.1,
+                duration_phase1=0.0,
                 name_phase2="stage-1-selection",
                 duration_phase2=0.75,
                 images=[stim1, stim2],
@@ -265,7 +247,7 @@ def get_psychopy_info(
                 duration=2.0,
                 key_dict=key_dict,
                 name_phase1="stage-2-decision",
-                duration_phase1=0.1,
+                duration_phase1=0.0,
                 name_phase2="stage-2-selection",
                 duration_phase2=0.5,
                 images=[s2_img1, s2_img2, s2_planet, fixation_cross()],

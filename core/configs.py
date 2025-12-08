@@ -1,17 +1,19 @@
 try:
     from rewardgym.utils import check_random_state
-    from rewardgym.tasks.utils import check_conditions_not_following
+    from rewardgym.tasks.utils import check_conditions_not_following, check_conditions_present
 except ImportError:
     from ....utils import check_random_state
-    from ...utils import check_conditions_not_following
+    from ...utils import check_conditions_not_following, check_conditions_present
 
 
-def get_configs(stimulus_set: str = "1"):
+def get_configs(stimulus_set: int = 10):
+
     condition_dict = {
         "expected-transition": {0: {0: 1, 1: 2}},
         "unexpected-transition": {0: {0: 2, 1: 1}},
         None: None,
     }
+
     random_state = check_random_state(int(stimulus_set))
 
     # Actually create pseudo-random transitions:
@@ -31,11 +33,16 @@ def get_configs(stimulus_set: str = "1"):
             condition_proposal = random_state.choice(
                 a=transition_list, size=len(transition_list), replace=False
             ).tolist()
-            check = check_conditions_not_following(
+
+            # Not elegant, but checking, that the first three selections each block are expected transitions.
+            check = [check_conditions_present(condition_proposal[i:i+1], ["expected-transition"]) for i in range(3)]
+
+            check.append(check_conditions_not_following(
                 condition_proposal, ["unexpected-transition"], 1
             )
+            )
 
-            if check:
+            if all(check):
                 reject = False
                 conditions.extend(condition_proposal)
 
