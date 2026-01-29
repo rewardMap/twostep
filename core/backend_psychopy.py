@@ -97,10 +97,14 @@ def twostep_alien_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
     return stim_set, stim_properties
 
 
-def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_DEFAULTS):
+def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_DEFAULTS, brighten_dark=True):
 
-    def recolor(input_file, new_color, target_size=(300, 300)):
+    def recolor(input_file, new_color, target_size=(300, 300), brighten_dark=brighten_dark):
         from PIL import Image
+
+        if brighten_dark:
+            if np.array(new_color).mean() < 75:
+                new_color = [i + 75 for i in new_color]
 
         img = Image.open(input_file).convert("RGBA")
         img.thumbnail(target_size, Image.Resampling.LANCZOS)  # keeps aspect ratio
@@ -168,7 +172,8 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
         recolor(planet_order[1].as_posix(), new_color=set_colors[3], target_size=(300, 300)),
         ]
 
-    stim_properties = {}
+    stim_properties = {"aliens": [i.as_posix().split('twostep')[-1] for i in alien_order],
+                       "planets": [i.as_posix().split('twostep')[-1] for i in planet_order]}
     return stim_set, stim_properties
 
 
