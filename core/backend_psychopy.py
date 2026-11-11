@@ -18,6 +18,9 @@ from rewardgym.stimuli import (
     make_card_stimulus,
 )
 
+from rewardgym.render import ImageDefinition
+from rewardgym.render.passive_routines import PresentationRoutine, FeedBackRoutine
+
 
 def twostep_card_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
     random_state = check_random_state(random_state)
@@ -191,13 +194,8 @@ def get_psychopy_info(
     else:
         stim_set, stimuli = external_stimuli
 
-    reward_feedback = FeedBackStimulus(
-        1.0,
-        text="{0}",
-        target="reward",
-        name="reward",
-        bar_total=fullpoints,
-        rl_label="reward"
+    reward_feedback = FeedBackRoutine(
+        duration=1.0, name="reward", bar_total=fullpoints, rl_label="reward"
     )
 
     fix = ImageStimulus(
@@ -206,7 +204,11 @@ def get_psychopy_info(
         autodraw=True,
         name="initial-fixation",
     )
-    fix_iti = BaseStimulus(duration=1.0, name="iti", rl_label='obs')
+    fix = PresentationRoutine(
+            stimulus_definitions=[ImageDefinition(image=fixation_cross(), name="fixation", autoDraw=True)], duration=0.1, name="initial-fixation"
+        )
+
+    fix_iti = PresentationRoutine(duration=1.0, name="iti", rl_label='obs')
 
     fix2 = ImageStimulus(
         image_paths=[fixation_cross()],
@@ -214,6 +216,10 @@ def get_psychopy_info(
         autodraw=True,
         name="transition",
     )
+
+    fix2 = PresentationRoutine(
+            stimulus_definitions=[ImageDefinition(image=fixation_cross(), name="fixation", autoDraw=True)], duration=0.25, name="transition"
+        )
 
     image_shift = 325
 
@@ -242,11 +248,21 @@ def get_psychopy_info(
     def second_state(s2_img1, s2_img2, s2_planet, key_dict):
         tmp_list = [
             fix2,
-            ImageStimulus(
-                image_paths=[s2_planet, fixation_cross()],
-                duration=0.25,
+            PresentationRoutine(
+                stimulus_definitions=[
+                    ImageDefinition(
+                        name="planet",
+                        image=s2_planet,
+                        pos=(0, -100)
+                    ),
+                    ImageDefinition(
+                        name="fixation",
+                        image=fixation_cross(),
+                        pos=(0, 0)
+                    )
+                ],
                 name="planet",
-                positions=[(0, -100), (0, 0)]
+                duration=0.25
             ),
             TwoStimuliWithResponseAndSelection(
                 duration=2.0,
