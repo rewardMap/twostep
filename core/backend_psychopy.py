@@ -3,12 +3,7 @@ import numpy as np
 import pathlib
 
 from rewardgym import check_random_state
-from rewardgym.psychopy_render import (
-    TwoStimuliWithResponseAndSelection,
-    FeedBackStimulus,
-    ImageStimulus,
-    BaseStimulus,
-)
+
 from rewardgym.stimuli import (
     fixation_cross,
     STIMULUS_DEFAULTS,
@@ -20,7 +15,7 @@ from rewardgym.stimuli import (
 
 from rewardgym.render import ImageDefinition
 from rewardgym.render.passive_routines import PresentationRoutine, FeedBackRoutine
-
+from rewardgym.render.response_routines import NAFCRoutine
 
 def twostep_card_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
     random_state = check_random_state(random_state)
@@ -198,24 +193,11 @@ def get_psychopy_info(
         duration=1.0, name="reward", bar_total=fullpoints, rl_label="reward"
     )
 
-    fix = ImageStimulus(
-        image_paths=[fixation_cross()],
-        duration=0.1,
-        autodraw=True,
-        name="initial-fixation",
-    )
     fix = PresentationRoutine(
             stimulus_definitions=[ImageDefinition(image=fixation_cross(), name="fixation", autoDraw=True)], duration=0.1, name="initial-fixation"
         )
 
     fix_iti = PresentationRoutine(duration=1.0, name="iti", rl_label='obs')
-
-    fix2 = ImageStimulus(
-        image_paths=[fixation_cross()],
-        duration=0.25,
-        autodraw=True,
-        name="transition",
-    )
 
     fix2 = PresentationRoutine(
             stimulus_definitions=[ImageDefinition(image=fixation_cross(), name="fixation", autoDraw=True)], duration=0.25, name="transition"
@@ -226,56 +208,91 @@ def get_psychopy_info(
     final_step = [reward_feedback, fix_iti]
 
     def first_state(stim1, stim2, key_dict):
+        stim1 = ImageDefinition(
+            name="stim1",
+            autoDraw=False,
+            image=stim1
+        )
+        stim2 = ImageDefinition(
+            name="stim2",
+            autoDraw=False,
+            image=stim2
+        )
+
         tmp_list = [
             fix,
-            TwoStimuliWithResponseAndSelection(
+            NAFCRoutine(
                 duration=2.0,
                 key_dict=key_dict,
-                name_phase1="stage-1-decision",
-                duration_phase1=0.0,
-                name_phase2="stage-1-selection",
-                duration_phase2=0.75,
-                images=[stim1, stim2],
-                positions=[(-image_shift, 0), (image_shift, 0)],
+                presentation_settings={
+                    "name_before": "stage-1-decision",
+                    "name_after": "stage-2-selection",
+                    "rl_label_before": "obs",
+                    "rl_label_after": "reward",
+                    "duration_after": 0.75,
+                    "present_after": True,
+                },
+                stimulus_mapping={0: stim1, 1: stim2},
+                positions={0: (-image_shift, 0), 1: (image_shift, 0)},
+                name="response",
                 rl_label="action",
-                rl_label_phase1="obs",
-                rl_label_phase2='reward',
+                randomize_positions=True,
+                highlight_selected=True,
             ),
         ]
 
         return tmp_list
 
     def second_state(s2_img1, s2_img2, s2_planet, key_dict):
-        tmp_list = [
-            fix2,
-            PresentationRoutine(
-                stimulus_definitions=[
-                    ImageDefinition(
+        stim1 = ImageDefinition(
+            name="s2_img1",
+            autoDraw=False,
+            image=s2_img1
+        )
+        stim2 = ImageDefinition(
+            name="s2_img2",
+            autoDraw=False,
+            image=s2_img2
+        )
+        planet=ImageDefinition(
                         name="planet",
                         image=s2_planet,
                         pos=(0, -100)
-                    ),
-                    ImageDefinition(
+                    )
+
+        fixation=ImageDefinition(
                         name="fixation",
                         image=fixation_cross(),
                         pos=(0, 0)
                     )
+
+        tmp_list = [
+            fix2,
+            PresentationRoutine(
+                stimulus_definitions=[
+                    planet, fixation
                 ],
                 name="planet",
                 duration=0.25
             ),
-            TwoStimuliWithResponseAndSelection(
+
+            NAFCRoutine(
                 duration=2.0,
                 key_dict=key_dict,
-                name_phase1="stage-2-decision",
-                duration_phase1=0.0,
-                name_phase2="stage-2-selection",
-                duration_phase2=0.5,
-                images=[s2_img1, s2_img2, s2_planet, fixation_cross()],
-                positions=[(-image_shift, 0), (image_shift, 0), (0, -100), (0, 0)],
+                presentation_settings={
+                    "name_before": "stage-2-decision",
+                    "name_after": "stage-2-selection",
+                    "rl_label_before": "obs",
+                    "duration_after": 0.75,
+                    "present_after": True,
+                },
+                stimulus_mapping={0: stim1, 1: stim2},
+                scene_stimuli=[planet, fixation],
+                positions={0: (-image_shift, 0), 1: (image_shift, 0)},
                 rl_label="action",
-                rl_label_phase1="obs",
-                flip_probability=0.5,
+                name="response",
+                randomize_positions=True,
+                highlight_selected=True,
             ),
         ]
 
