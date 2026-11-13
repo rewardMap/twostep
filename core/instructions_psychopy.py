@@ -5,7 +5,7 @@ except ModuleNotFoundError:
 
 from rewardgym.stimuli import zero_cross, win_cross, lose_cross
 
-from .backend_psychopy import two_step_alien_images
+from .render import two_step_alien_images
 import json
 import numpy as np
 import pathlib

@@ -175,7 +175,7 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
     return stim_set, stim_properties
 
 
-def get_psychopy_info(
+def get_render_info(
     random_state=111,
     key_dict={"left": 0, "right": 1},
     external_stimuli=None,
@@ -300,12 +300,12 @@ def get_psychopy_info(
 
     info_dict = {
         0: {
-            "psychopy": first_state(
+            "render": first_state(
                 stim1=stim_set[0][0], stim2=stim_set[0][1], key_dict=key_dict
             )
         },
         1: {
-            "psychopy": second_state(
+            "render": second_state(
                 s2_img1=stim_set[1][0],
                 s2_img2=stim_set[1][1],
                 s2_planet=stim_set[1][2],
@@ -313,17 +313,17 @@ def get_psychopy_info(
             )
         },
         2: {
-            "psychopy": second_state(
+            "render": second_state(
                 s2_img1=stim_set[2][0],
                 s2_img2=stim_set[2][1],
                 s2_planet=stim_set[2][2],
                 key_dict=key_dict,
             )
         },
-        3: {"psychopy": final_step},
-        4: {"psychopy": final_step},
-        5: {"psychopy": final_step},
-        6: {"psychopy": final_step},
+        3: {"render": final_step},
+        4: {"render": final_step},
+        5: {"render": final_step},
+        6: {"render": final_step},
     }
 
     return info_dict, stimuli
