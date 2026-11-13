@@ -5,8 +5,8 @@ import numpy as np
 
 from rewardgym import check_random_state
 from rewardgym.render import ImageDefinition
-from rewardgym.render.passive_routines import FeedBackRoutine, PresentationRoutine
-from rewardgym.render.response_routines import NAFCRoutine
+from rewardgym.render.routines import FeedBackRoutine, PresentationRoutine
+from rewardgym.render.routines import NAFCRoutine
 from rewardgym.stimuli import (
     STIMULUS_DEFAULTS,
     draw_alien,
