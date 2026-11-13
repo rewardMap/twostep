@@ -10,7 +10,7 @@ except ModuleNotFoundError:
 import json
 import pathlib
 
-from rewardgym.stimuli import win_cross, zero_cross
+from rewardgym.render.stimuli import win_cross, zero_cross
 
 from .render import two_step_alien_images
 
