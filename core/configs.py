@@ -1,6 +1,9 @@
 try:
+    from rewardgym.tasks.utils import (
+        check_conditions_not_following,
+        check_conditions_present,
+    )
     from rewardgym.utils import check_random_state
-    from rewardgym.tasks.utils import check_conditions_not_following, check_conditions_present
 except ImportError:
     from ....utils import check_random_state
     from ...utils import check_conditions_not_following, check_conditions_present

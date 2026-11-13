@@ -1,21 +1,21 @@
-from copy import deepcopy
-import numpy as np
 import pathlib
+from copy import deepcopy
+
+import numpy as np
 
 from rewardgym import check_random_state
-
+from rewardgym.render import ImageDefinition
+from rewardgym.render.passive_routines import FeedBackRoutine, PresentationRoutine
+from rewardgym.render.response_routines import NAFCRoutine
 from rewardgym.stimuli import (
-    fixation_cross,
     STIMULUS_DEFAULTS,
-    generate_stimulus_properties,
-    draw_spaceship,
     draw_alien,
+    draw_spaceship,
+    fixation_cross,
+    generate_stimulus_properties,
     make_card_stimulus,
 )
 
-from rewardgym.render import ImageDefinition
-from rewardgym.render.passive_routines import PresentationRoutine, FeedBackRoutine
-from rewardgym.render.response_routines import NAFCRoutine
 
 def twostep_card_stimuli(random_state, stim_defaults=STIMULUS_DEFAULTS):
     random_state = check_random_state(random_state)
@@ -100,15 +100,14 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
     def recolor(input_file, new_color, target_size=(300, 300), brighten_dark=brighten_dark):
         from PIL import Image
 
-        if brighten_dark:
-            if np.array(new_color).mean() < 75:
-                new_color = [i + 75 for i in new_color]
+        if brighten_dark and np.array(new_color).mean() < 75:
+            new_color = [i + 75 for i in new_color]
 
         img = Image.open(input_file).convert("RGBA")
         img.thumbnail(target_size, Image.Resampling.LANCZOS)  # keeps aspect ratio
         data = np.array(img, dtype=float)
         gray = np.array(img.convert("L"), dtype=float)  # convert to grayscale (1 channel)
-        data[..., :3] = np.stack([gray]*3, axis=-1)    #
+        data[..., :3] = np.stack([gray]*3, axis=-1)
 
         r, g, b, a = data[..., 0], data[..., 1], data[..., 2], data[..., 3]
 
@@ -177,11 +176,13 @@ def two_step_alien_images(random_state, directory=None, stim_defaults=STIMULUS_D
 
 def get_render_info(
     random_state=111,
-    key_dict={"left": 0, "right": 1},
+    key_dict=None,
     external_stimuli=None,
     fullpoints=None,
     **kwargs,
 ):
+    if key_dict is None:
+        key_dict = {"left": 0, "right": 1}
     random_state = check_random_state(random_state)
 
     if external_stimuli is None:

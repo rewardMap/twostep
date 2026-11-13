@@ -1,14 +1,18 @@
 try:
-    from psychopy.visual import ImageStim, TextBox2, Line, TextStim
+    from psychopy.visual import ImageStim, TextBox2, TextStim
 except ModuleNotFoundError:
-    from rewardgym.psychopy_render.psychopy_stubs import ImageStim, TextBox2, Line, TextStim
+    from rewardgym.psychopy_render.psychopy_stubs import (
+        ImageStim,
+        TextBox2,
+        TextStim,
+    )
 
-from rewardgym.stimuli import zero_cross, win_cross, lose_cross
+import json
+import pathlib
+
+from rewardgym.stimuli import win_cross, zero_cross
 
 from .render import two_step_alien_images
-import json
-import numpy as np
-import pathlib
 
 # Instructions modeled after
 # Feher da Silva, C., Lombardi, G., Edelson, M., & Hare, T. A. (2023). Rethinking model-based and model-free influences on mental effort and striatal prediction errors. Nature Human Behaviour, 7(6), 956–969. https://doi.org/10.1038/s41562-023-01573-1

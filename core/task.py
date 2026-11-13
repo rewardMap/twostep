@@ -1,5 +1,5 @@
 import pathlib
-from typing import Literal, Union
+from typing import Literal
 
 import numpy as np
 
@@ -9,8 +9,8 @@ from rewardgym.tasks.yaml_tools import load_task_from_yaml
 
 
 def get_task(
-    render_backend: Literal["pygame", "psychopy"] = None,
-    random_state: Union[int, np.random.Generator] = 1000,
+    render_backend: Literal["pygame", "psychopy"] | None = None,
+    random_state: int | np.random.Generator = 1000,
     key_dict=None,
     **kwargs,
 ):
@@ -35,7 +35,6 @@ def get_task(
         6: DriftingReward(random_state=random_state, p=None),
     }
 
-    action_map = {}
 
     if render_backend is not None:
         from .render import get_render_info
