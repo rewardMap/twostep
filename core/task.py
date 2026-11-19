@@ -5,8 +5,9 @@ import numpy as np
 
 from rewardgym import check_random_state
 from rewardgym.reward_classes import DriftingReward
+from rewardgym.runner.plugins import AddRemainder, MiscUpdateTwoStep
 from rewardgym.tasks.yaml_tools import load_task_from_yaml
-from rewardgym.runner.plugins import MiscUpdateTwoStep, AddRemainder
+
 
 def get_task(
     render_backend: Literal["pygame", "psychopy"] | None = None,
