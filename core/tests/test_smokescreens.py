@@ -4,7 +4,7 @@ try:
         get_configs,
         get_render_info,
         get_task,
-        instructions_psychopy,
+        get_instructions,
     )
 except (ModuleNotFoundError, ImportError):
     try:
@@ -12,7 +12,7 @@ except (ModuleNotFoundError, ImportError):
             get_configs,
             get_render_info,
             get_task,
-            instructions_psychopy,
+            get_instructions,
         )
 
     except (ModuleNotFoundError, ImportError):
@@ -20,7 +20,7 @@ except (ModuleNotFoundError, ImportError):
             get_configs,
             get_render_info,
             get_task,
-            instructions_psychopy,
+            get_instructions,
         )
 
 import warnings
@@ -51,12 +51,12 @@ def test_get_task():
     assert isinstance(c, dict)
 
 
-def test_instructions_psychopy():
-    if instructions_psychopy is not None:
-        a, b = instructions_psychopy()
+def test_get_instructions():
+    if get_instructions is not None:
+        a, b = get_instructions()
 
         assert isinstance(a, list)
         assert isinstance(b, dict)
 
     else:
-        warnings.warn("Import of instructions_psychopy was None, is this intended?")
+        warnings.warn("Import of get_instructions was None, is this intended?")

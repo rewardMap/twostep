@@ -11,14 +11,14 @@ except (ImportError, NameError):
     get_render_info = None
 
 try:
-    from .instructions_psychopy import instructions_psychopy
+    from .instructions import get_instructions
 except (ImportError, NameError):
-    instructions_psychopy = None
+    get_instructions = None
 
 
 __all__ = [
     "get_configs",
     "get_render_info",
     "get_task",
-    "instructions_psychopy",
+    "get_instructions",
 ]

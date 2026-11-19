@@ -6,7 +6,7 @@ import numpy as np
 from rewardgym import check_random_state
 from rewardgym.reward_classes import DriftingReward
 from rewardgym.tasks.yaml_tools import load_task_from_yaml
-
+from rewardgym.runner.plugins import MiscUpdateTwoStep, AddRemainder
 
 def get_task(
     render_backend: Literal["pygame", "psychopy"] | None = None,
@@ -46,5 +46,8 @@ def get_task(
             random_state=random_state, key_dict=key_dict, fullpoints=info_dict["meta"]["fullpoints"]
         )
         info_dict.update(render_dict)
+
+    info_dict.update({"plugins": {"pre-trial": [MiscUpdateTwoStep()],
+    "post-trial": [AddRemainder()]}})
 
     return environment_graph, reward_structure, info_dict

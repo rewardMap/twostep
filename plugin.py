@@ -15,9 +15,9 @@ except (ImportError, NameError):
     get_render_info = None
 
 try:
-    from .core import instructions_psychopy
+    from .core import get_instructions
 except (ImportError, NameError):
-    instructions_psychopy = None
+    get_instructions = None
 
 import pathlib
 
@@ -34,6 +34,6 @@ def register_task():
             "get_task": get_task,
             "get_configs": get_configs,
             "get_render_info": get_render_info,
-            "instructions_psychopy": instructions_psychopy,
+            "get_instructions": get_instructions,
         }
     }
