@@ -1,7 +1,7 @@
 import json
 import pathlib
 
-from rewardgym.render.routines.passive_routines import InstructionRoutine
+from rewardgym.render.routines import InstructionRoutine
 from rewardgym.render.stimuli import win_cross, zero_cross
 from rewardgym.render.stimulus_definitions import (
     ImageDefinition,
