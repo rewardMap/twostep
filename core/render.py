@@ -226,7 +226,7 @@ def get_render_info(
                 key_dict=key_dict,
                 presentation_settings={
                     "name_before": "stage-1-decision",
-                    "name_after": "stage-2-selection",
+                    "name_after": "stage-1-selection",
                     "rl_label_before": "obs",
                     "rl_label_after": "reward",
                     "duration_after": 0.75,
@@ -283,7 +283,7 @@ def get_render_info(
                     "name_before": "stage-2-decision",
                     "name_after": "stage-2-selection",
                     "rl_label_before": "obs",
-                    "duration_after": 0.75,
+                    "duration_after": 0.5,
                     "present_after": True,
                 },
                 stimulus_mapping={0: stim1, 1: stim2},
